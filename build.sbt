@@ -6,7 +6,7 @@ name := "scala-sql-compare"
 lazy val commonSettings = Seq(
   organization := "com.softwaremill",
   version := "1.0-SNAPSHOT",
-  scalaVersion := "2.12.4"
+  scalaVersion := "2.12.12"
 )
 
 lazy val scalaSqlCompare = (project in file("."))
@@ -18,7 +18,9 @@ lazy val common = (project in file("common"))
   .settings(
     libraryDependencies ++= Seq(
       "org.postgresql" % "postgresql" % "42.0.0",
-      "org.flywaydb" % "flyway-core" % "4.1.2")
+      "org.flywaydb" % "flyway-core" % "4.1.2",
+       "com.opentable.components" % "otj-pg-embedded" % "0.13.3"
+    )
   )
 
 lazy val slick = (project in file("slick"))
