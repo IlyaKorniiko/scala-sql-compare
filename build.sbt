@@ -19,7 +19,7 @@ lazy val common = (project in file("common"))
     libraryDependencies ++= Seq(
       "org.postgresql" % "postgresql" % "42.0.0",
       "org.flywaydb" % "flyway-core" % "4.1.2",
-       "com.opentable.components" % "otj-pg-embedded" % "0.13.3"
+      "com.opentable.components" % "otj-pg-embedded" % "0.13.3"
     )
   )
 
@@ -27,7 +27,7 @@ lazy val slick = (project in file("slick"))
   .settings(commonSettings)
   .settings(
     libraryDependencies ++= Seq(
-      "com.typesafe.slick" %% "slick" % "3.2.1"
+      "com.typesafe.slick" %% "slick" % "3.3.3"
     )
   )
   .dependsOn(common)
